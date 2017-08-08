@@ -7,15 +7,44 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
-
+    <style name="base_imageView_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="common_left_back_imageView_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:src">@drawable/icon_back</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="base_textView_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
     <style name="Button">
-        <item name="android:textSize">15sp</item>
-        <item name="android:layout_margin">0dp</item>
-        <item name="android:padding">0dp</item>
-        <item name="android:minHeight">50dp</item>
-        <item name="android:minWidth">50dp</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
     </style>
 
+    <style name="Button.Menu">
+        <item name="android:background">@drawable/button_selector</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+
+    <style name="Button.Menu.WithICO">
+        <item name="android:drawableRight">@drawable/ic_right</item>
+        <item name="android:drawableEnd">@drawable/ic_right</item>
+    </style>
+    <style name="Button.Test">
+      <item name="android:background">@drawable/button_selector</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
 </resources>

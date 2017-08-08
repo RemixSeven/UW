@@ -829,4 +829,21 @@ public class tools {
             }
         }
     }
+    /**
+     * 将字节数组转换为16进制字符串
+     *
+     * @param bytes 带转换的字节数组
+     * @return 16进制表示的字符串
+     */
+    public static String binaryToHexString(byte[] bytes) {
+        String hexStr = "0123456789ABCDEF";
+        String result = "";
+        String hex;
+        for (byte b : bytes) {
+            hex = String.valueOf(hexStr.charAt((b & 0xF0) >> 4));
+            hex += String.valueOf(hexStr.charAt(b & 0x0F));
+            result += hex + " ";
+        }
+        return result;
+    }
 }

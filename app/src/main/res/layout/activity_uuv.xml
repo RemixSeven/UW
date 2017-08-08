@@ -13,7 +13,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto">
 <com.roughike.bottombar.BottomBar
     android:id="@+id/bottomBar"
     android:layout_width="match_parent"
-    android:layout_height="60dp"
+    android:layout_height="55dp"
     android:layout_alignParentBottom="true"
     app:bb_tabXmlResource="@xml/bottombar_tabs" />
 
