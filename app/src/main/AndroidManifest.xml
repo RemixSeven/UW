@@ -24,13 +24,7 @@
         </activity>
         <activity android:name=".RegisterActivity"
             android:screenOrientation="portrait"/>
-        <activity
-            android:name=".UWActivity"
-            android:screenOrientation="portrait">
-        </activity>
         <activity android:name=".SubmarineActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".VesselActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".Wifisetting"
             android:label="Wifi设置"

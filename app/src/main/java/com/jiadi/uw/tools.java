@@ -32,6 +32,10 @@ import android.widget.Toast;
 import java.io.File;
 import java.security.InvalidParameterException;
 import java.security.MessageDigest;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 import java.util.Map;
 
 /**
@@ -680,7 +684,8 @@ public class tools {
      */
     public static boolean isWifiConnected(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        return cm != null && cm.getActiveNetworkInfo().getType() == ConnectivityManager.TYPE_WIFI;
+        //return cm != null && cm.getActiveNetworkInfo().getType() == ConnectivityManager.TYPE_WIFI;
+        return true;
     }
 
     /**
@@ -829,6 +834,17 @@ public class tools {
             }
         }
     }
+
+    /**
+     * 获取当前系统时间字符串
+     *
+     * @return 返回时间字符串(不含日期)
+     */
+    public static String getTime() {
+        DateFormat df = new SimpleDateFormat("HH:mm:ss", Locale.CHINA);
+        return df.format(new Date());
+    }
+
     /**
      * 将字节数组转换为16进制字符串
      *
@@ -845,5 +861,40 @@ public class tools {
             result += hex + " ";
         }
         return result;
+    }
+    /**
+     * 将字节转换为16进制字符串
+     *
+     * @param bytes 带转换的字节数组
+     * @return 16进制表示的字符串
+     */
+    public static String binaryToHexString(byte bytes) {
+        String hexStr = "0123456789ABCDEF";
+        String result = "";
+        String hex;
+        hex = String.valueOf(hexStr.charAt((bytes & 0xF0) >> 4));
+        hex += String.valueOf(hexStr.charAt(bytes & 0x0F));
+        result += hex + " ";
+        return result;
+    }
+    /**
+     * 把字符串去空格后转换成byte数组。如"37   5a"转成[0x37][0x5A]
+     * @param s
+     * @return
+     */
+    public static byte[] string2bytes(String s){
+        String ss = s.replace(" ", "");
+        int string_len = ss.length();
+        int len = string_len/2;
+        if(string_len%2 ==1){
+            ss = "0"+ss;
+            string_len++;
+            len++;
+        }
+        byte[] a = new byte[len];
+        for(int i=0;i<len;i++){
+            a[i] = (byte)Integer.parseInt(ss.substring(2*i,2*i+2), 16);
+        }
+        return a;
     }
 }

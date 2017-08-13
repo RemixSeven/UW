@@ -337,7 +337,7 @@ public class RegisterActivity extends Activity implements View.OnClickListener{
 
         @Override
         public void onSignUpSuccess(User user) {
-            Intent intent= new Intent(RegisterActivity.this,UWActivity.class);
+            Intent intent= new Intent(RegisterActivity.this,LoginActivity.class);
             intent.putExtra(INTENT_USER,user.getUsername());
             startActivity(intent);
             Toast.makeText(RegisterActivity.this, R.string.register_success,Toast.LENGTH_LONG).show();

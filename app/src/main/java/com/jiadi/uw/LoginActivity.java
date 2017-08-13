@@ -258,7 +258,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
         @Override
         public void onLoginSuccess() {
-            Intent intent=new Intent(LoginActivity.this,UWActivity.class);
+            Intent intent=new Intent(LoginActivity.this,SubmarineActivity.class);
             startActivity(intent);
             finish();
             Toast.makeText(LoginActivity.this, R.string.login_success,Toast.LENGTH_LONG).show();

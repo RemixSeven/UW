@@ -11,13 +11,12 @@
     tools:context="com.jiadi.uw.VesselActivity">
 
     <LinearLayout
-        android:layout_margin="40dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true">
 
         <LinearLayout
             android:layout_width="match_parent"

@@ -24,9 +24,9 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="Button">
-        <item name="android:layout_height">50dp</item>
-        <item name="android:paddingLeft">10dp</item>
-        <item name="android:paddingRight">10dp</item>
+        <item name="android:layout_height">5dp</item>
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingRight">2dp</item>
     </style>
 
     <style name="Button.Menu">
@@ -43,8 +43,11 @@
     </style>
     <style name="Button.Test">
       <item name="android:background">@drawable/button_selector</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">15sp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:drawablePadding">10dp</item>
     </style>
+    <style name="color">
+        <item name="android:background">@drawable/button_selector</item>
+        </style>
 </resources>
