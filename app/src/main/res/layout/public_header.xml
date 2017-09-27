@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_header"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#0099CC"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!--
+        Author:小马
+        注意：不要轻易修改本文件！
+        要使得公共头部正常工作，
+        引入公共头部布局(本文件)
+        <include layout="@layout/public_header" />
+        其次，你需要修改主题：
+        在style.xml中新增如下主题：
+        <style name="TranslucentTheme" parent="AppTheme"/>
+        在style.xml中修改原有AppTheme主题为Theme.AppCompat.Light.NoActionBar
+        在style.xml(V19)中新增如下主题：
+        <style name="TranslucentTheme" parent="Theme.AppCompat.Light.NoActionBar">
+            <item name="android:windowTranslucentStatus">true</item>
+            <item name="android:windowTranslucentNavigation">true</item>
+        </style>
+        在style.xml(V21)中新增如下主题：
+        Android 5.x开始需要把颜色设置透明，否则导航栏会呈现系统默认的浅灰色
+        <style name="TranslucentTheme" parent="Theme.AppCompat.Light.NoActionBar">
+            <item name="android:windowTranslucentStatus">false</item>
+            <item name="android:windowTranslucentNavigation">true</item>
+            <item name="android:statusBarColor">@android:color/transparent</item>
+        </style>
+        其次，在清单文件中应用主题TranslucentTheme。
+        最后，在使用了沉浸式头部的activity中使用headerManager载入布局。
+    -->
+
+    <TextView
+        android:id="@+id/tv_header_return_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:drawableLeft="@drawable/ic_return_white"
+        android:drawablePadding="-5dp"
+        android:drawableStart="@drawable/ic_return_white"
+        android:text="返回信息"
+        android:textColor="@color/header_selector"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_header_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="标题"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/iv_header_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:contentDescription="消息图标"
+        android:padding="3dp" />
+
+    <TextView
+        android:id="@+id/iv_header_msg_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/header_selector"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

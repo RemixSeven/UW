@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/UW.iml" filepath="$PROJECT_DIR$/UW.iml" />
-      <module fileurl="file://$PROJECT_DIR$/UW-master.iml" filepath="$PROJECT_DIR$/UW-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pan.iml" filepath="$PROJECT_DIR$/pan.iml" />
     </modules>
   </component>
 </project>
