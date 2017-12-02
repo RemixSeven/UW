@@ -1,4 +1,4 @@
-package cn.pan;
+package com.jiadi.uw;
 
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
@@ -15,13 +15,12 @@ import android.widget.Toast;
 
 import java.io.DataInputStream;
 import java.io.IOException;
-
-import static cn.pan.tools.binaryToHexString;
-import static cn.pan.tools.dialog;
-import static cn.pan.tools.find;
-import static cn.pan.tools.isWifiConnected;
-import static cn.pan.tools.spGet;
-import static cn.pan.tools.toast;
+import static com.jiadi.uw.tools.binaryToHexString;
+import static com.jiadi.uw.tools.dialog;
+import static com.jiadi.uw.tools.find;
+import static com.jiadi.uw.tools.isWifiConnected;
+import static com.jiadi.uw.tools.spGet;
+import static com.jiadi.uw.tools.toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnTouchListener, View.OnClickListener {
     private TextView tv_log;
